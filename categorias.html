@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías - Club Deportivo Alcázar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="img/escudo.png" alt="Escudo del Club" class="escudo-header">
+    <h1>Club Deportivo Alcázar</h1>
+    <p>¡Más que un club, una familia!</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="historia.html">Historia</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="categorias.html" class="active">Categorías</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <section id="categorias">
+      <h2>Categorías del Club</h2>
+
+      <div class="categorias-lista">
+        <div class="categoria" onclick="toggleInfo('escuela')">Escuela</div>
+        <div class="categoria" onclick="toggleInfo('benjaminA')">Benjamín A</div>
+        <div class="categoria" onclick="toggleInfo('benjaminB')">Benjamín B</div>
+        <div class="categoria" onclick="toggleInfo('alevinA')">Alevín A</div>
+        <div class="categoria" onclick="toggleInfo('alevinB')">Alevín B</div>
+        <div class="categoria" onclick="toggleInfo('infantil')">Infantil</div>
+        <div class="categoria" onclick="toggleInfo('juvenil')">Juvenil</div>
+        <div class="categoria" onclick="toggleInfo('senior')">Senior</div>
+      </div>
+
+      <!-- ESCUELA -->
+      <div id="info-escuela" class="info oculto">
+        <h3>Escuela</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('escuela-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('escuela-calendario')">Calendario</button>
+          <button onclick="toggleSub('escuela-galeria')">Galería</button>
+          <button onclick="toggleSub('escuela-horarios')">Horarios</button>
+        </div>
+        <div id="escuela-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>Juan López</li>
+            <li>María Ruiz</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>Pedro García</li>
+            <li>Lucía Pérez</li>
+            <li>Carlos Sánchez</li>
+          </ul>
+        </div>
+        <div id="escuela-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="escuela-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto1.jpg" alt="Foto Escuela 1">
+          <img src="img/foto2.jpg" alt="Foto Escuela 2">
+        </div>
+        <div id="escuela-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Lunes y Miércoles</p>
+          <p><strong>Hora:</strong> 16:00 - 17:00</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+      <!-- BENJAMÍN A -->
+      <div id="info-benjaminA" class="info oculto">
+        <h3>Benjamín A</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('benjaminA-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('benjaminA-calendario')">Calendario</button>
+          <button onclick="toggleSub('benjaminA-galeria')">Galería</button>
+          <button onclick="toggleSub('benjaminA-horarios')">Horarios</button>
+        </div>
+        <div id="benjaminA-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>Laura Gómez</li>
+            <li>Carlos Díaz</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>Ana López</li>
+            <li>Javier Torres</li>
+            <li>Martín Ruiz</li>
+          </ul>
+        </div>
+        <div id="benjaminA-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="benjaminA-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto3.jpg" alt="Foto Benjamín A 1">
+          <img src="img/foto4.jpg" alt="Foto Benjamín A 2">
+        </div>
+        <div id="benjaminA-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Martes y Jueves</p>
+          <p><strong>Hora:</strong> 17:00 - 18:00</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+      <!-- BENJAMÍN B -->
+      <div id="info-benjaminB" class="info oculto">
+        <h3>Benjamín B</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('benjaminB-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('benjaminB-calendario')">Calendario</button>
+          <button onclick="toggleSub('benjaminB-galeria')">Galería</button>
+          <button onclick="toggleSub('benjaminB-horarios')">Horarios</button>
+        </div>
+        <div id="benjaminB-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>Antonio Pérez</li>
+            <li>Sofía Martínez</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>Laura Torres</li>
+            <li>Hugo López</li>
+            <li>Diego Fernández</li>
+          </ul>
+        </div>
+        <div id="benjaminB-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="benjaminB-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto5.jpg" alt="Foto Benjamín B 1">
+          <img src="img/foto6.jpg" alt="Foto Benjamín B 2">
+        </div>
+        <div id="benjaminB-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Lunes y Miércoles</p>
+          <p><strong>Hora:</strong> 16:30 - 17:30</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+      <!-- Alevín A -->
+      <div id="info-alevinA" class="info oculto">
+        <h3>Alevín A</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('alevinA-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('alevinA-calendario')">Calendario</button>
+          <button onclick="toggleSub('alevinA-galeria')">Galería</button>
+          <button onclick="toggleSub('alevinA-horarios')">Horarios</button>
+        </div>
+        <div id="alevinA-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>Fernando Ruiz</li>
+            <li>Clara Sánchez</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>Miguel Torres</li>
+            <li>Isabel Gómez</li>
+            <li>Raúl Fernández</li>
+          </ul>
+        </div>
+        <div id="alevinA-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="alevinA-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto7.jpg" alt="Foto Alevín A 1">
+          <img src="img/foto8.jpg" alt="Foto Alevín A 2">
+        </div>
+        <div id="alevinA-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Martes y Jueves</p>
+          <p><strong>Hora:</strong> 17:30 - 18:30</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+      <!-- Alevín B -->
+      <div id="info-alevinB" class="info oculto">
+        <h3>Alevín B</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('alevinB-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('alevinB-calendario')">Calendario</button>
+          <button onclick="toggleSub('alevinB-galeria')">Galería</button>
+          <button onclick="toggleSub('alevinB-horarios')">Horarios</button>
+        </div>
+        <div id="alevinB-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>David López</li>
+            <li>Paula Martínez</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>Sergio Torres</li>
+            <li>Elena Gómez</li>
+            <li>Iván Fernández</li>
+          </ul>
+        </div>
+        <div id="alevinB-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="alevinB-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto9.jpg" alt="Foto Alevín B 1">
+          <img src="img/foto10.jpg" alt="Foto Alevín B 2">
+        </div>
+        <div id="alevinB-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Lunes y Miércoles</p>
+          <p><strong>Hora:</strong> 16:30 - 17:30</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+      <!-- Infantil -->
+      <div id="info-infantil" class="info oculto">
+        <h3>Infantil</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('infantil-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('infantil-calendario')">Calendario</button>
+          <button onclick="toggleSub('infantil-galeria')">Galería</button>
+          <button onclick="toggleSub('infantil-horarios')">Horarios</button>
+        </div>
+        <div id="infantil-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>Ricardo Morales</li>
+            <li>Lucía Fernández</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>Héctor García</li>
+            <li>Clara Torres</li>
+            <li>Samuel Pérez</li>
+          </ul>
+        </div>
+        <div id="infantil-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="infantil-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto11.jpg" alt="Foto Infantil 1">
+          <img src="img/foto12.jpg" alt="Foto Infantil 2">
+        </div>
+        <div id="infantil-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Martes y Jueves</p>
+          <p><strong>Hora:</strong> 17:00 - 18:00</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+      <!-- Juvenil -->
+      <div id="info-juvenil" class="info oculto">
+        <h3>Juvenil</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('juvenil-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('juvenil-calendario')">Calendario</button>
+          <button onclick="toggleSub('juvenil-galeria')">Galería</button>
+          <button onclick="toggleSub('juvenil-horarios')">Horarios</button>
+        </div>
+        <div id="juvenil-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>Andrés López</li>
+            <li>Marina Torres</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>David Sánchez</li>
+            <li>Paula Martínez</li>
+            <li>Antonio Gómez</li>
+          </ul>
+        </div>
+        <div id="juvenil-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="juvenil-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto13.jpg" alt="Foto Juvenil 1">
+          <img src="img/foto14.jpg" alt="Foto Juvenil 2">
+        </div>
+        <div id="juvenil-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Lunes y Miércoles</p>
+          <p><strong>Hora:</strong> 18:00 - 19:00</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+      <!-- Senior -->
+      <div id="info-senior" class="info oculto">
+        <h3>Senior</h3>
+        <div class="subopciones">
+          <button onclick="toggleSub('senior-plantilla')">Plantilla</button>
+          <button onclick="toggleSub('senior-calendario')">Calendario</button>
+          <button onclick="toggleSub('senior-galeria')">Galería</button>
+          <button onclick="toggleSub('senior-horarios')">Horarios</button>
+        </div>
+        <div id="senior-plantilla" class="subcontenido oculto">
+          <h4>ENTRENADORES</h4>
+          <ul>
+            <li>Javier Torres</li>
+            <li>Elena Ruiz</li>
+          </ul>
+          <h4>JUGADORES</h4>
+          <ul>
+            <li>Carlos Pérez</li>
+            <li>María López</li>
+            <li>Pedro Fernández</li>
+          </ul>
+        </div>
+        <div id="senior-calendario" class="subcontenido oculto">
+          <a class="btn-calendario" href="calendarios/calendario_escuela.pdf" target="_blank" download>📄 Descargar Calendario</a>
+        </div>
+        <div id="senior-galeria" class="subcontenido subcontenido-galeria oculto">
+          <img src="img/foto15.jpg" alt="Foto Senior 1">
+          <img src="img/foto16.jpg" alt="Foto Senior 2">
+        </div>
+        <div id="senior-horarios" class="subcontenido oculto">
+          <p><strong>Días:</strong> Martes y Jueves</p>
+          <p><strong>Hora:</strong> 19:00 - 20:00</p>
+          <p><strong>Lugar:</strong> Campo Vista Alegre</p>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Club Deportivo Alcázar - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function toggleInfo(id) {
+      const elemento = document.getElementById('info-' + id);
+      elemento.classList.toggle('mostrar');
+      if (elemento.classList.contains('mostrar')) {
+        elemento.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleSub(id) {
+      const elemento = document.getElementById(id);
+      elemento.classList.toggle('mostrar');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+/* --- General --- */
+body {
+  margin: 0;
+  font-family:sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%; left: 50%;
+  width: 300px; height: 300px;
+  background-image: url('img/escudo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+header {
+  background-color: #006400;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+header .escudo-header {
+  width: 80px;
+  height: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0;
+}
+
+nav {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.8rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover, nav a.active {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+main h2 {
+  color: #006400;
+  text-align: center;
+}
+
+footer {
+  background: #006400;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* --- Categorías --- */
+#categorias h2 {
+  margin-bottom: 1.5rem;
+}
+
+.categorias-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.categoria {
+  background: #006400;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+}
+
+.categoria:hover {
+  background: #004d00;
+}
+
+/* --- Info bloques con animación --- */
+.info {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.info.mostrar {
+  max-height: 1000px; /* suficiente para todo el contenido */
+  padding: 1rem;
+}
+
+/* Subopciones dentro de cada categoría */
+.subopciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.subopciones button {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.subopciones button:hover {
+  background-color: #004d00;
+}
+
+/* Subcontenido desplegable */
+.subcontenido {
+  background: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+.subcontenido.mostrar {
+  max-height: 1000px;
+  padding: 1rem;
+}
+
+.subcontenido h4 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.subcontenido ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.subcontenido ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* Galería de imágenes */
+.subcontenido-galeria img {
+  width: 150px;
+  height: auto;
+  margin: 0.3rem;
+  border-radius: 5px;
+}
+
+/* Botón de calendario */
+.btn-calendario {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #006400;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-calendario:hover {
+  background-color: #004d00;
+}
+
+/* Horarios */
+.subcontenido p {
+  margin: 0.3rem 0;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 2rem;
+}
+
+/* --- Sección contacto y redes actualizada --- */
+.contacto-redes {
+  display: flex;
+  justify-content: space-between; /* izquierda/derecha */
+  align-items: flex-start; /* alineación al inicio */
+  padding: 20px 0;
+  background-color: transparent; /* sin fondo */
+  border-radius: 0;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* para adaptarse en móviles */
+}
+
+.contacto-info {
+  text-align: left;
+}
+
+.contactos-redes {
+  text-align: right;
+  display: flex;
+  flex-direction: column; /* vertical */
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.contactos-redes .red-social {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #006400;
+  font-weight: bold;
+  gap: 5px;
+  margin-top: 5px; /* separación del texto "Síguenos en redes:" */
+}
+
+.contactos-redes .red-social img {
+  width: 24px;
+  height: 24px;
+}
